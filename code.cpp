@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include <ctime>
-#include <iostream>
 
 using namespace std;
 
@@ -17,6 +16,10 @@ int main() {
     cout << "Enter your choice (rock, paper, scissors): ";
     cin >> userChoice;
 
+    for (char &c : userChoice){  //Making it case insensitive.
+        c = tolower(c);  
+    }
+    
     // Check if user's choice is valid
     bool validChoice = false;
     for (int i = 0; i < numOptions; i++) {
