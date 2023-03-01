@@ -57,10 +57,11 @@ int main() {
     char playAgain;
     cout << "Do you want to play again? (y/n): ";
     cin >> playAgain;
-
+    playAgain = tolower(playAgain);
     if (playAgain != 'y' && playAgain != 'Y') {
       break;
     }
+    system("cls");
   }
 
   return 0;
