@@ -3,13 +3,35 @@
 
 using namespace std;
 
+void printFinalScore(int userscore, int computerscore)
+{
+    cout << "\nFinal Score - Your Score is: " << userscore << " " << " | " << "Computer Score is: " << computerscore << endl;
+}
+
+void printWinner(int userscore, int computerscore)
+{
+    if (userscore > computerscore)
+    {
+        cout << "\nYou Won!!" << endl;
+    }
+    else if (computerscore > userscore)
+    {
+        cout << "\nComputer Won!! Better Luck Next Time." << endl;
+    }
+    else
+    {
+        cout << "\nAhh, It's A Tie" << endl;
+    }
+}
+
 int main() {
   srand(time(nullptr)); // initialize random seed
 
   // Options for the game
   string options[] = {"rock", "paper", "scissors"};
   int numOptions = sizeof(options) / sizeof(options[0]);
-
+  int userscore = 0, computerscore = 0; // score tracking.
+  
   while (true) {
     // Get user's choice
     string userChoice;
@@ -49,8 +71,12 @@ int main() {
                (userChoice == "paper" && computerChoice == "rock") ||
                (userChoice == "scissors" && computerChoice == "paper")) {
       cout << "You win!" << endl;
+      userscore++;
+      cout << "Your Score is: " << userscore << " " << "Computer Score is: " << computerscore << endl;
     } else {
       cout << "The computer wins!" << endl;
+      computerscore++;
+      cout << "Your Score is: " << userscore << " " << "Computer Score is: " << computerscore << endl;
     }
 
     // Ask if user wants to play again
@@ -64,5 +90,8 @@ int main() {
     system("cls");
   }
 
+  printFinalScore(userscore, computerscore);
+  printWinner(userscore, computerscore);
+  
   return 0;
 }
