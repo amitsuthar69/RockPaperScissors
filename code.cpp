@@ -87,7 +87,11 @@ int main() {
     if (playAgain != 'y' && playAgain != 'Y') {
       break;
     }
+    #ifdef __linux__
+    system("clear");
+    #elif _WIN32 || _WIN64
     system("cls");
+    #endif
   }
 
   printFinalScore(userscore, computerscore);
