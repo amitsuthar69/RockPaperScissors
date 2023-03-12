@@ -7,5 +7,6 @@ Features:
 3. Final Score in the end.
 
 ## Showcase
-![rps](https://user-images.githubusercontent.com/53911515/224541005-f530813b-b8c7-40cf-a966-12e5d1583ecf.png)
+![image](https://user-images.githubusercontent.com/53911515/224541436-c2dff4f2-3054-4792-84ac-ccc2a2121d26.png)
+
 
